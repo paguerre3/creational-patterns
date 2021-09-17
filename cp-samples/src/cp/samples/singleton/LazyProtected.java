@@ -1,12 +1,13 @@
 package cp.samples.singleton;
 
 /**
- * INICIALIZACIÓN TARDÍA (thread safe aunque protección costosa):
- * La instancia se crea en el momento del llamado Global (estático) al método getInstance
- * el cual está protegido (thread-safe) y es la manera más simple de protección (syncronizada)
- * aunque NO es lo óptimo en terminos de rendimiento en cuanto al momento de creación,
- * i.e. si la instancia ya está instanciada los proximos threads sufrirían del "checkeo por sincronización"
- * aunque solo un thread pueda ejecutar este método (protección costosa).
+ * INICIALIZACIÓN TARDÍA (thread safe/bloqueante y acceso costoso):
+ * La instancia se crea en el momento del llamado global (estático) al método getInstance
+ * el cual es bloqueante (sección sincronizada/thread-safe), por lo cual,
+ * solo un thread pueda ejecutar este método y es la manera más simple de protección (syncronizada)
+ * aunque NO es lo óptimo en terminos de rendimiento,
+ * i.e. si la instancia ya está creads los proximos threads sufrirían del "bloqueo/sincronización
+ * mediante el acceso al método global"
  */
 public class LazyProtected {
     private static LazyProtected instance;
