@@ -1,2 +1,2 @@
-# creational-patterns
-Summary of creational patterns with sample codes
+# Patrones de Creación
+Resúmen de Patrones de Creación junto a códigos de ejemplo
