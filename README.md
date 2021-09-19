@@ -13,4 +13,4 @@ Los patrones de creación abordan este problema al desvincular al cliente por co
 
 Herramienta de diseño: https://plantuml.com/es/
 
-Audiencia: Desarrolladores, preferentemente Java, que necesiten reveer los patrones fundamentales de creación 
+Audiencia: Desarrolladores, preferentemente Java o con bases de POO, que necesiten reveer los patrones fundamentales de creación y cuando usarlos
