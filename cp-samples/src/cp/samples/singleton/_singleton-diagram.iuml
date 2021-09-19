@@ -1,6 +1,7 @@
 @startuml
 class Singleton {
  -Instance: Singleton
+ -<<constructor>> Singleton
  +{static} getInstance(): Singleton
 }
 @enduml
