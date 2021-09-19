@@ -10,3 +10,5 @@ Los Patrones de Creación se preocupan por la forma en que se crean los objetos.
 El operador "new" a menudo se considera dañino ya que dispersa objetos por toda la aplicación. Con el tiempo, cambiar una implementación puede resultar un desafío porque las clases se encuentran altamente acompladas al contexto del cliente.
 
 Los patrones de creación abordan este problema al desvincular al cliente por completo del proceso de inicialización real.
+
+Herramienta de diseño: https://plantuml.com/es/
