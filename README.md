@@ -12,3 +12,5 @@ El operador "new" a menudo se considera dañino ya que dispersa objetos por toda
 Los patrones de creación abordan este problema al desvincular al cliente por completo del proceso de inicialización real.
 
 Herramienta de diseño: https://plantuml.com/es/
+
+Audiencia: Desarrolladores, preferentemente Java, que necesiten reveer los patrones fundamentales de creación 
