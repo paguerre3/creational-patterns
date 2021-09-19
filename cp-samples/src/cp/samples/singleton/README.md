@@ -6,4 +6,4 @@ Su intención es garantizar que sólo "una instancia" de la clase exista por lo 
 * Recursos "caros de crear" en términos de rendimiento, e.g. establecimiento de conexión a la base de datos.
 * Recursos compartidos y o/utilidades: Clases de acceso a recursos y/o procesos comunes entre multiples objetos de la aplicación.
 
-![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/paguerre3/creational-patterns/blob/main/cp-samples/src/cp/samples/singleton/img/singleton-diagram)
+![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/paguerre3/creational-patterns/blob/main/cp-samples/src/cp/samples/singleton/_singleton-diagram.txt)
