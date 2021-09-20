@@ -11,6 +11,9 @@ El operador "new" a menudo se considera dañino ya que dispersa objetos por toda
 
 Los patrones de creación abordan este problema al desvincular al cliente por completo del proceso de inicialización real.
 
+![singleton](https://github.com/paguerre3/creational-patterns/tree/main/cp-samples/src/cp/samples/singleton)
+![factory method](https://github.com/paguerre3/creational-patterns/tree/main/cp-samples/src/cp/samples/factory_method)
+
 Herramienta de diseño: https://plantuml.com/es/
 
 Audiencia: Desarrolladores, preferentemente Java o con bases de POO, que necesiten reveer los patrones fundamentales de creación y cuando usarlos.
