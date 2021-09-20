@@ -1,0 +1,28 @@
+// Pseudocódigo
+class PolygonFactory is
+
+	// Factory method
+    public static method create(numberOfSides) is∫
+        field p: Polygon
+        if (numberOfSides == 3) then
+        	p = new Triangle()
+        else if (numberOfSides == 4) then
+            p = new Square()
+        // .. otras formas de polígonos como pentágono, heptágono, etc no se agregan por motivos de simplicidad
+        return p
+
+abstract class Polygon is
+	public abstract method showDefinition()
+
+class Triangle extends Polygon is
+    public method showDefinition() is
+        output "A geometric figure having three angles and three sides"
+
+class Square extends Polygon is
+    public method showDefinition() is
+        output "A flat geometric figure that has four equal sides and four right angles"
+
+class Application is
+    method main() is
+        Polygon p = PolygonFactory.create(3)
+        p.showDefinition()

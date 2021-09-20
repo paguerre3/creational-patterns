@@ -1,4 +1,4 @@
-// Pseudocódigo: Instanciación tardía, thread-safe y doble checkeo:
+// Pseudocódigo: Instanciación tardía, thread-safe y doble checkeo
 class Config is
     private static field instance: Config
     

@@ -9,20 +9,11 @@ abstract class Product
 }
 
 class ConcreteProductA
-{
- +doSomething 
-}
 class ConcreteProductB
-{
- +doSomething 
-}
 class ConcreteProductC
-{
- +doSomething 
-}
 
 Fabric --> Product
-Product <|– ConcreteProductA
-Product <|– ConcreteProductB
 Product <|– ConcreteProductC
+Product <|– ConcreteProductB
+Product <|– ConcreteProductA
 @enduml
