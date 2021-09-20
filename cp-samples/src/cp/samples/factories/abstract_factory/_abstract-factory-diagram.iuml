@@ -26,9 +26,20 @@ abstract class Color
 }
 
 class Pink
-class Blue
+class White
 
 ColorFactory --> Color
 Color <|– Pink
-Color <|– Blue
+Color <|– White
+
+abstract class FactoryProvider {
+ +{static} getFactory(condition): AbstractFactory
+}
+
+abstract class AbstractFactory {
+ +create(condition): T
+}
+
+AbstractFactory <|– ToyFactory
+AbstractFactory <|– ColorFactory
 @enduml
