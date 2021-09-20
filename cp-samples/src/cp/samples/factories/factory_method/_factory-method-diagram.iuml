@@ -1,5 +1,5 @@
 @startuml
-class Fabric {
+abstract class Fabric {
  +{static} create(condition): Product
 }
 
