@@ -13,11 +13,10 @@ public abstract class PolygonFactory {
                 if (polygons.isEmpty()) {
                     polygons.put(3, new Triangle());
                     polygons.put(4, new Square());
-                    // TODO: add more geometric figures here like Polygon, Pentagon and Heptagon
+                    // TODO: add more geometric figures here like Pentagon, Heptagon and Optagon
                 }
             }
         }
-        Optional<Polygon> p = Optional.ofNullable(polygons.get(numberOfSides));
-        return p;
+        return Optional.ofNullable(polygons.get(numberOfSides));
     }
 }

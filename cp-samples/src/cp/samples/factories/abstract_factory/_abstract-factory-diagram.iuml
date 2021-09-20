@@ -1,0 +1,34 @@
+@startuml
+abstract class ToyFactory {
+ +create(condition): Toy
+}
+
+abstract class Toy
+{
+ +{abstract} getType: String
+ +{abstract} makeSound
+}
+
+class Dog
+class Doll
+
+ToyFactory --> Toy
+Toy <|– Dog
+Toy <|– Doll
+
+abstract class ColorFactory {
+ +create(condition): Color
+}
+
+abstract class Color
+{
+ +{abstract} getColor: String
+}
+
+class Pink
+class Blue
+
+ColorFactory --> Color
+Color <|– Pink
+Color <|– Blue
+@enduml
