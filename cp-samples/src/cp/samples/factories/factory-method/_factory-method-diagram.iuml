@@ -1,12 +1,16 @@
 @startuml
-class Factory
-class <<abstract>> Product
+class Fabric {
+ +{static} create(condition): Product
+}
+abstract class Product
+{
+ +{abstract} doSomething 
+}
 class ConcreteProductA
 class ConcreteProductB
 class ConcreteProductC
 
-Factory : <<factory-method>> + create(type)
-Product : + doSomething()
+Fabric ..> Product
 Product <|– ConcreteProductA
 Product <|– ConcreteProductB
 Product <|– ConcreteProductC
