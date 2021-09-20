@@ -23,8 +23,8 @@ class ToyFactory extends AbstractFactory is
         return t
 
 abstract class Toy is
-	public abstract method getType(): String
-	public abstract method makeSound()
+    public abstract method getType(): String
+    public abstract method makeSound()
 
 class Doll extends Toy is
     public method getType() is
