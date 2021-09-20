@@ -40,6 +40,7 @@ abstract class AbstractFactory {
  +create(condition): T
 }
 
+FactoryProvider --> AbstractFactory
 AbstractFactory <|– ToyFactory
 AbstractFactory <|– ColorFactory
 @enduml
