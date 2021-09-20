@@ -1,4 +1,4 @@
-// Pseudocódigo
+// Pseudocódigo: Fábrica de fábricas
 abstract class FactoryProvider is
     getFactory(choice) is
         field af: AbstractFactory
@@ -8,12 +8,13 @@ abstract class FactoryProvider is
             t = new ColorFactory()
         return af
 
+// Contrato "general"
 abstract class AbstractFactory is
     create(condition): T
 
 class ToyFactory extends AbstractFactory is
 
-	// Factory method
+    // Factory method
     public method create(type) is
         field t: Toy
         if (type == "DOLL") then
