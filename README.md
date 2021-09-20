@@ -14,6 +14,4 @@ Los patrones de creación abordan este problema al desvincular al cliente por co
 1. [Singleton](https://github.com/paguerre3/creational-patterns/tree/main/cp-samples/src/cp/samples/singleton)
 2. [Factory Method](https://github.com/paguerre3/creational-patterns/tree/main/cp-samples/src/cp/samples/factory_method)
 
-Herramienta de diseño: https://plantuml.com/es/
-
 Audiencia: Desarrolladores, preferentemente Java o con bases de POO, que necesiten reveer los patrones fundamentales de creación y cuando usarlos.
