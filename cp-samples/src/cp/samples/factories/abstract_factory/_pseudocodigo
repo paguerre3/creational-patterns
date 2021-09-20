@@ -40,17 +40,17 @@ class Dog extends Toy is
 
 class ColorFactory extends AbstractFactory is
 
-	// Factory method
+    // Factory method
     public method create(type) is
         field c: Toy
         if (type == "PNK") then
-        	c = new Pink()
+            c = new Pink()
         else if (type == "WHT") then
             c = new White()
         return c
 
 abstract class Color is
-	public abstract method getColor(): String
+    public abstract method getColor(): String
 
 class Pink extends Color is
     public method getColor() is
