@@ -1,5 +1,10 @@
 package cp.samples.singleton;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
+
 /**
  * INSTANCIACIÓN TARDíA (a demanda vía inner static class):
  * Autor: Bill Pugh
@@ -12,8 +17,22 @@ package cp.samples.singleton;
  */
 public class OnDemand {
 
+    Map<String, String> configs = new HashMap();
+
     // constructor privado
-    private OnDemand() {}
+    private OnDemand() {
+        long start = System.currentTimeMillis();
+        //Se emula la carga del recurso costoso"
+        try {
+            TimeUnit.SECONDS.sleep(2);
+            configs.put("key1", "val1");
+            configs.put("key2", "val2");
+        } catch (InterruptedException e) {
+        } finally {
+            long end = System.currentTimeMillis();
+            System.out.println("Elapsed time of init: " + String.valueOf(end - start));
+        }
+    }
 
     // clase de acceso global interna
     private static class InnerHelper {
@@ -22,5 +41,9 @@ public class OnDemand {
 
     public static OnDemand getInstance(){
         return InnerHelper.INSTANCE;
+    }
+
+    public Optional<String> getConfig(String key) {
+        return Optional.ofNullable(configs.get(key));
     }
 }
