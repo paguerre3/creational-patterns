@@ -1,0 +1,67 @@
+// Pseudocódigo
+abstract class FactoryProvider is
+    getFactory(choice) is
+        field af: AbstractFactory
+        if (choice == "TOY") then
+            t = new ToyFactory()
+        else if (choice == "COLOR") then
+            t = new ColorFactory()
+        return af
+
+abstract class AbstractFactory is
+    create(condition): T
+
+class ToyFactory extends AbstractFactory is
+
+	// Factory method
+    public method create(type) is
+        field t: Toy
+        if (type == "DOLL") then
+        	t = new Doll()
+        else if (type == "DOG") then
+            t = new Dog()
+        return t
+
+abstract class Toy is
+	public abstract method getType(): String
+	public abstract method makeSound()
+
+class Doll extends Toy is
+    public method getType() is
+        return "Doll"
+    public method makeSound() is
+        output "WOW!"
+
+class Dog extends Toy is
+    public method getType() is
+        return "Toy"
+    public method makeSound() is
+        output "Guau"
+
+class ColorFactory extends AbstractFactory is
+
+	// Factory method
+    public method create(type) is
+        field c: Toy
+        if (type == "PNK") then
+        	c = new Pink()
+        else if (type == "WHT") then
+            c = new White()
+        return c
+
+abstract class Color is
+	public abstract method getColor(): String
+
+class Pink extends Color is
+    public method getColor() is
+        return "Pink"
+
+class White extends Color is
+    public method getColor() is
+        return "White"
+
+class Application is
+    method main() is
+        FactoryProvider.getFactory("TOY").create("DOG").makeSound()
+        FactoryProvider.getFactory("TOY").create("DOLL").makeSound()
+        output FactoryProvider.getFactory("COLOR").create("PNK").getColor()

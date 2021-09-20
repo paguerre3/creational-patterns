@@ -11,7 +11,7 @@ FactoryProvider --> AbstractFactory
 AbstractFactory <|– ToyFactory
 AbstractFactory <|– ColorFactory
 
-abstract class ToyFactory {
+class ToyFactory {
  +create(condition): Toy
 }
 
@@ -28,7 +28,7 @@ ToyFactory --> Toy
 Toy <|– Dog
 Toy <|– Doll
 
-abstract class ColorFactory {
+class ColorFactory {
  +create(condition): Color
 }
 
