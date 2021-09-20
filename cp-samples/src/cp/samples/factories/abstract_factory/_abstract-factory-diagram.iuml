@@ -1,4 +1,16 @@
 @startuml
+abstract class FactoryProvider {
+ +{static} getFactory(condition): AbstractFactory
+}
+
+abstract class AbstractFactory {
+ +create(condition): T
+}
+
+FactoryProvider --> AbstractFactory
+AbstractFactory <|– ToyFactory
+AbstractFactory <|– ColorFactory
+
 abstract class ToyFactory {
  +create(condition): Toy
 }
@@ -31,16 +43,4 @@ class White
 ColorFactory --> Color
 Color <|– Pink
 Color <|– White
-
-abstract class FactoryProvider {
- +{static} getFactory(condition): AbstractFactory
-}
-
-abstract class AbstractFactory {
- +create(condition): T
-}
-
-FactoryProvider --> AbstractFactory
-AbstractFactory <|– ToyFactory
-AbstractFactory <|– ColorFactory
 @enduml
