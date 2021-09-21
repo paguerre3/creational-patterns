@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class ColorFactory extends AbstractFactory<Optional<Color>>{
-    private static Map<String, Color> colors = new HashMap<>();
+    private final static Map<String, Color> colors = new HashMap<>();
 
     @Override
     public Optional<Color> create(String colorAbbreviation) {
