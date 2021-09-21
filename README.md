@@ -20,8 +20,4 @@ Audiencia: Desarrolladores, preferentemente Java o con bases de POO, que necesit
 ---
 Origen: Elements of Reusable Object-Oriented Software publicado en 1994 por Erich Gamma, John Vlissides, Ralph Johnson y Richard Helm (Gang of Four o GoF).
 
-**NOTA**
-
-Singleton mejorado (Bill Pugh).
-
-Builder simplificado (Joshua Bloch).
+**NOTA** Singleton mejorado (Bill Pugh). Builder simplificado (Joshua Bloch).
