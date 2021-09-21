@@ -8,6 +8,8 @@ public abstract class PolygonFactory {
     private static Map<Integer, Polygon> polygons = new HashMap<>();
 
     public static Optional<Polygon> create(int numberOfSides){
+        // esta sección evita el uso de "switch" statements
+        // y emula una especie de cache que es "thread safe":
         if (polygons.isEmpty()) {
             synchronized (PolygonFactory.class) {
                 if (polygons.isEmpty()) {

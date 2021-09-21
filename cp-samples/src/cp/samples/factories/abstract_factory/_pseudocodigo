@@ -2,9 +2,9 @@
 abstract class FactoryProvider is
     getFactory(choice) is
         field af: AbstractFactory
-        if (choice == "TOY") then
+        if (choice == "Toy") then
             t = new ToyFactory()
-        else if (choice == "COLOR") then
+        else if (choice == "Color") then
             t = new ColorFactory()
         return af
 
@@ -17,9 +17,9 @@ class ToyFactory extends AbstractFactory is
     // Factory method
     public method create(type) is
         field t: Toy
-        if (type == "DOLL") then
+        if (type == "Doll") then
         	t = new Doll()
-        else if (type == "DOG") then
+        else if (type == "Dog") then
             t = new Dog()
         return t
 
@@ -44,9 +44,9 @@ class ColorFactory extends AbstractFactory is
     // Factory method
     public method create(type) is
         field c: Toy
-        if (type == "PNK") then
+        if (type == "Pnk") then
             c = new Pink()
-        else if (type == "WHT") then
+        else if (type == "Wht") then
             c = new White()
         return c
 
@@ -63,6 +63,5 @@ class White extends Color is
 
 class Application is
     method main() is
-        FactoryProvider.getFactory("TOY").create("DOG").makeSound()
-        FactoryProvider.getFactory("TOY").create("DOLL").makeSound()
-        output FactoryProvider.getFactory("COLOR").create("PNK").getColor()
+        FactoryProvider.getFactory("Toy").create("Dog").makeSound()
+        output FactoryProvider.getFactory("Color").create("Pnk").getColor()
