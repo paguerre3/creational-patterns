@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public abstract class PolygonFactory {
-    private static Map<Integer, Polygon> polygons = new HashMap<>();
+    private static final Map<Integer, Polygon> polygons = new HashMap<>();
 
     public static Optional<Polygon> create(int numberOfSides){
         // esta sección evita el uso de "switch" statements

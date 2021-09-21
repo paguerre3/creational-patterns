@@ -7,8 +7,18 @@ public class App {
         FactoryProvider.getFactory("Toy").ifPresent(t -> {
             Optional<Toy> toy = t.create("Dog");
             toy.ifPresent(d -> {
+                System.out.println(d.getType());
                 d.makeSound();
             });
         });
+        FactoryProvider.getFactory("Color").ifPresent(t -> {
+            Optional<Color> color = t.create("Pnk");
+            color.ifPresent(c -> {
+                System.out.println(c.getColor());
+                System.out.println(c.getRgbCode());
+            });
+        });
+        FactoryProvider.getFactory("NN").ifPresentOrElse(f -> {},
+                () -> System.out.println("Factory not found!"));
     }
 }
