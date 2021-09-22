@@ -9,7 +9,7 @@ class Person {
     //getters
 }
 
-{static} class Person.Builder {
+static class Person.Builder {
     //person attributes
     +Person.Builder(name, surname)
     +withAddress(address): Person.Builder
