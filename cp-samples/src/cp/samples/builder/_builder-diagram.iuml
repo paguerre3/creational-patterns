@@ -1,17 +1,7 @@
 @startuml
-static class PersonBuilder {
-    +PersonBuilder(name, surname)
-    +withAddress(address): PersonBuilder
-    +withEmail(email): PersonBuilder
-    +build(): Person
+class Singleton {
+ -Instance: Singleton
+ -<<constructor>> Singleton
+ +{static} getInstance(): Singleton
 }
-
-class Person {
-    -name: String
-    -surname: String
-    -address: String
-    -email: String
-}
-
-PersonBuilder --> Person
 @enduml
