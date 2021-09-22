@@ -1,5 +1,6 @@
 @startuml
 class PersonBuilder {
+    -personAttributes
     +<<constructor>> PersonBuilder(name)
     +withSurname(surname): PersonBuilder
     +withAddress(address): PersonBuilder
@@ -12,6 +13,8 @@ class Person {
     -surname: String
     -address: String
     -email: String
+    -<<constructor>> Person(builder)
+    +publicGetters()
 }
 
 PersonBuilder --> Person
