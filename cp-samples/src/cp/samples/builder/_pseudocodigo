@@ -6,11 +6,42 @@ class Person is
     field address: String
     field email: String
 
+    public method display():String is
+        // mostrar resumen con los valores de todos los campos
+        return "Persona: " + this.name // ...
+
+
+    private constructor Person(personBuilder) is
+        this.name = personBuilder.name
+        // se setean todos los atributos aquí
+
     class PersonBuilder is
         // Builder object
+
+        // todos los atributos de persona aquí
+
+        public constructor PersonBuilder(name) is
+            this.name = name
+
+        public method withSurname(surname):PersonBuilder is
+            this.surname = surname;
+            return this
+
+        public method withAddress(address):PersonBuilder is
+            this.address = address;
+            return this
+
+        public method withEmail(email):PersonBuilder is
+            this.address = email;
+            return this
+
+        // main constructor method
+        public method build():Person is
+            return new Person(this)
 
 
 class Application is
     method main() is
-        FactoryProvider.getFactory("Toy").create("Dog").makeSound()
-        output FactoryProvider.getFactory("Color").create("Pnk").getColor()
+        output new Person.PersonBuilder("Cami")
+            .withEmail("cami@gmail.com")
+            .build().display() 
