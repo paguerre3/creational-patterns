@@ -8,8 +8,9 @@ Builder crea respresentaciones similares de instancias usando un enfoque "paso a
 * Cuando existen muchas maneras de construir un objeto, usualmente debido a propiedades opcionales, se puede observar que el incremento en el número de propiedades tiene una relación directa con la cantidad de constructores nuevos (telescoping constructor anti-pattern).
 * Cuando el cliente espera diferentes representaciones del objeto a construir.
 
---
+---
 **Nota**
+
 ¿Porqué no usar setters despues del "new""?
 Usar setters después de crear un objeto implica que este puede estar en estado inconsistente a mitad de su construcción.
 Además, no se cumple el principio de inmutabilidad de los Beans.
