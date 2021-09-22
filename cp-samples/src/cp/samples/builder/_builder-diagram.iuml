@@ -1,0 +1,22 @@
+@startuml
+class Person {
+    -name: String
+    -surname: String
+    -address: String
+    -socialSeqNbr: int
+    -email: String
+    +Person(builder)
+    //getters
+}
+
+{static} class Person.Builder {
+    //person attributes
+    +Person.Builder(name, surname)
+    +withAddress(address): Person.Builder
+    +withSocialSeqNumber(socialSeqNbr): Person.Builder
+    +withEmail(email): Person.Builder
+    +build(): Person
+}
+
+Person.Builder --> Person
+@enduml
