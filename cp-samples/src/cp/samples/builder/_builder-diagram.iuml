@@ -1,20 +1,17 @@
 @startuml
-class Person {
-    -name: String
-    -surname: String
-    -address: String
-    -email: String
-    +Person(personBuilder)
-    //getters
-}
-
 static class PersonBuilder {
-    //person attributes
     +PersonBuilder(name, surname)
     +withAddress(address): PersonBuilder
     +withEmail(email): PersonBuilder
     +build(): Person
 }
 
-Person.Builder --> Person
+class Person {
+    -name: String
+    -surname: String
+    -address: String
+    -email: String
+}
+
+PersonBuilder --> Person
 @enduml
