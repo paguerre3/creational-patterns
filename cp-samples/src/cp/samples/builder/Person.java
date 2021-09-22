@@ -1,5 +1,9 @@
 package cp.samples.builder;
 
+/**
+ * Autor: Joshua Bloch
+ * Builder simplificado desde su versión original en GoF.
+ */
 public class Person {
     private String firstName;
     private String lastName;

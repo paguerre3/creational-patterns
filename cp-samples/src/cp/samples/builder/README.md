@@ -12,5 +12,6 @@ Builder crea respresentaciones similares de instancias usando un enfoque "paso a
 **Nota**
 
 ¿Porqué no usar setters despues del "new""?
-Usar setters después de crear un objeto implica que este puede estar en estado inconsistente a mitad de su construcción.
+
+Usar setters después de crear un objeto implica que éste puede estar en estado inconsistente (a mitad de su construcción).
 Además, no se cumple el principio de inmutabilidad de los Beans.
