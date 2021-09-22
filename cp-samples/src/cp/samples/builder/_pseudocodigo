@@ -1,0 +1,16 @@
+// Pseudocódigo: Builder
+class Person is
+    // Objeto a construir con campos opcionales
+    field name: String
+    field surname: String
+    field address: String
+    field email: String
+
+    class PersonBuilder is
+        // Builder object
+
+
+class Application is
+    method main() is
+        FactoryProvider.getFactory("Toy").create("Dog").makeSound()
+        output FactoryProvider.getFactory("Color").create("Pnk").getColor()

@@ -2,7 +2,7 @@ package cp.samples.builder;
 
 /**
  * Autor: Joshua Bloch
- * Builder simplificado desde su versión original en GoF.
+ * Builder simplificado siguiendo el patrón Fluent.
  */
 public class Person {
     private String firstName;
