@@ -3,18 +3,16 @@ class Person {
     -name: String
     -surname: String
     -address: String
-    -socialSeqNbr: int
     -email: String
-    +Person(builder)
+    +Person(personBuilder)
     //getters
 }
 
-static class Person.Builder {
+static class PersonBuilder {
     //person attributes
-    +Person.Builder(name, surname)
-    +withAddress(address): Person.Builder
-    +withSocialSeqNumber(socialSeqNbr): Person.Builder
-    +withEmail(email): Person.Builder
+    +PersonBuilder(name, surname)
+    +withAddress(address): PersonBuilder
+    +withEmail(email): PersonBuilder
     +build(): Person
 }
 
