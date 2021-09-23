@@ -1,0 +1,12 @@
+@startuml
+abstract class Prototype
+{
+ +{abstract} clone
+}
+
+class ConcretePrototypeA
+class ConcretePrototypeB
+
+Prototype <|– ConcretePrototypeA
+Prototype <|– ConcretePrototypeB
+@enduml
