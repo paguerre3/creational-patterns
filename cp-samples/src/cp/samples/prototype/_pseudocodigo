@@ -1,0 +1,27 @@
+// Pseudocódigo
+abstract class Prototype is
+    field attribute1: String
+    field attribute2: String
+    // agregar getters y setters ...
+
+    // método de copia del Prototype
+	public abstract method clone():Prototype
+
+class ConcretePrototype extends Prototype is
+    public method clone():ConcretePrototype is
+        field copy = new ConcretePrototype()
+        copy.setAttribute1(this.attribute1)
+        copy.setAttribute2(this.attribute2)
+        return copy
+
+class Application is
+    method main() is
+        Prototype proto1 = mew ConcretePrototype()
+        proto1.setAttribute1("val1")
+        proto1.setAttribute2("val2")
+        output proto1.getAttribute1()
+        output proto1.getAttribute2()
+        Prototype proto2 = proto1.clone();
+        proto2.setAttribute2("val3")
+        output proto2.getAttribute1()
+        output proto2.getAttribute2()
