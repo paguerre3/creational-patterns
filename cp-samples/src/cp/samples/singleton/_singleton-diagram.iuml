@@ -1,5 +1,10 @@
 @startuml
-class Singleton #white;line:blue;text:blue
+skinparam class {
+BackgroundColor White
+ArrowColor Blue
+BorderColor Blue
+}
+skinparam stereotypeCBackgroundColor White
 class Singleton {
  -Instance: Singleton
  -<<constructor>> Singleton
