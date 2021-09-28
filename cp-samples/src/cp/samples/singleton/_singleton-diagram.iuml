@@ -1,4 +1,7 @@
 @startuml
+skinparam backgroundcolor AntiqueWhite
+skinparam classBackgroundColor CornflowerBlue
+
 class Singleton {
  -Instance: Singleton
  -<<constructor>> Singleton
