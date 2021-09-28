@@ -1,5 +1,6 @@
 @startuml
-class Singleton #white;line:blue;text:blue {
+class Singleton #white;line:blue;text:blue
+class Singleton {
  -Instance: Singleton
  -<<constructor>> Singleton
  +{static} getInstance(): Singleton
