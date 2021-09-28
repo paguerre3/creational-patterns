@@ -1,6 +1,5 @@
 @startuml
-skinparam backgroundcolor AntiqueWhite
-skinparam classBackgroundColor CornflowerBlue
+class class #white;line:blue;text:blue
 
 class Singleton {
  -Instance: Singleton
