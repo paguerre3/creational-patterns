@@ -1,4 +1,11 @@
 @startuml
+skinparam class {
+BackgroundColor White
+ArrowColor Blue
+BorderColor Blue
+}
+skinparam stereotypeCBackgroundColor White
+skinparam stereotypeABackgroundColor White
 abstract class Fabric {
  +{static} create(condition): Product
 }
